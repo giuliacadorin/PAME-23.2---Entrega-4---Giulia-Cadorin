@@ -18,8 +18,8 @@ export const Container = styled.div`
   background-color: #4a707f;
   padding: 20px;
   border-radius: 10px;
-  width: 300px;
-  height: 400px;
+  width: 360px;
+  height: 420px;
 `;
 export const LoginTitle = styled.h2`
   color: #fff;
@@ -35,8 +35,27 @@ export const LoginContainer = styled.div`
   
 `;
 
+export const InputWithImage = styled.div`
+  position: relative;
+
+  input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 40px; /* Espaço para a imagem */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .input-image {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+`;
+
 export const Input = styled.input`
-  width: 250px;
+  width: 300px;
   height: 30px;
   margin-bottom: 10px;
   padding: 8px;
@@ -45,7 +64,7 @@ export const Input = styled.input`
 `;
 
 export const LoginButton = styled.button`
-  width: 260px;
+  width: 300px;
   height: 40px;
   background-color: #4caf50;
   color: #fff;
@@ -54,4 +73,18 @@ export const LoginButton = styled.button`
   font-size: 12px;
   border-radius: 12px;
   margin-top: 20px;
+`;
+
+// Estilização para o rodapé
+export const Footer = styled.footer`
+  background-color: #1f3842;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  justify-content:space-between;
 `;

@@ -1,15 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom"; //Routes
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
 import Login from "../Pages/Login";
 import Cadastro from "../Pages/Cadastro/index.js";
 
-const Rotas = () => {
+function Rotas () {
   return (
     <Router>
-      {/* <Routes> */}
-      <Route path="/" exact component={Login} />
-      <Route path="/cadastro" exact component={Cadastro} />
-      {/* </Routes> */}
+      <Routes>
+        <Route path="/" element={<Login></Login>} />
+        <Route path="/Cadastro" element={<Cadastro></Cadastro>} />
+        <Route path="/*" element={<div>Not Found</div>} />
+      </Routes>
     </Router>
   );
 };
