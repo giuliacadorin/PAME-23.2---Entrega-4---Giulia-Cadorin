@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Importa o componente Link
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { VscAccount, VscLock } from "react-icons/vsc";
-
 
 import {
   CadastroContainer,
@@ -13,23 +12,46 @@ import {
   InputWithIcon,
 } from "./styles";
 
-
 function Cadastro() {
-
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [rememberUser, setRememberUser] = useState(false);
 
   const navigate = useNavigate();
 
+  // Função para lidar com o cadastro
   const handleCadastro = () => {
-    // Lógica de cadastro (substitua por sua lógica real)
-    // Salvando no localStorage
-    localStorage.setItem("username", username);
-    localStorage.setItem("password", password);
+    // Lógica de cadastro
+    console.log("Usuário cadastrado com sucesso!");
+
+    // Salva as informações do usuário no localStorage se a opção "Lembrar usuário" estiver marcada
+    if (rememberUser) {
+      localStorage.setItem(
+        "rememberedUser",
+        JSON.stringify({ username, password })
+      );
+    }
 
     // Redireciona para a página de login
     navigate("/login");
   };
+
+  // Função para carregar as informações do usuário salvas no localStorage (se existirem)
+  const loadRememberedUser = () => {
+    const rememberedUser = localStorage.getItem("rememberedUser");
+
+    if (rememberedUser) {
+      const { username, password } = JSON.parse(rememberedUser);
+      setUsername(username);
+      setPassword(password);
+      setRememberUser(true);
+    }
+  };
+
+  // Carrega as informações do usuário ao montar o componente
+  useEffect(() => {
+    loadRememberedUser();
+  }, []);
 
   return (
     <CadastroContainer>

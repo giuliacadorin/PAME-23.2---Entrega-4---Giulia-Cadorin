@@ -10,23 +10,41 @@ import {
   Input,
   LoginButton,
   InputWithIcon,
+  // CustomSwitchContainer,
+  // CustomSwitchInput,
+  // CustomSwitchLabel,
+  // CustomSwitchSlider,
+  // CustomSwitchSliderBefore,
+  // CustomSwitchChecked,
+  // CustomSwitchCheckedSlider,
+  // CustomSwitchCheckedSliderBefore,
 } from "./styles";
 
 function Login() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [rememberUser, setRememberUser] = useState(false);
 
   const handleLogin = () => {
-    // Lógica de autenticação 
-    if (username === "usuario" && password === "senha") {
-      console.log("Usuário logado com sucesso!");
+    // Lógica de autenticação
+    // if (username === "usuario" && password === "senha") {
+    //   console.log("Usuário logado com sucesso!");
+
+      // Salva as informações do usuário no localStorage se a opção "Lembrar usuário" estiver marcada
+      // if (rememberUser) {
+      //   localStorage.setItem(
+      //     "rememberedUser",
+      //     JSON.stringify({ username, password })
+      //   );
+      // }
+      const isAuthenticated = true;
       // Redireciona para a página "home"
       navigate("/home");
-    } else {
-      console.log("Usuário não cadastrado.");
+    // } else {
+    //   console.log("Usuário não cadastrado.");
     }
-  };
+  // };
 
   return (
     <PageContainer>
@@ -51,6 +69,24 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </InputWithIcon>
+        {/* <CustomSwitchContainer>
+          <CustomSwitchInput
+            type="checkbox"
+            id="customSwitch"
+            checked={rememberUser}
+            onChange={() => setRememberUser(!rememberUser)}
+          />
+          <CustomSwitchLabel htmlFor="customSwitch">
+            <CustomSwitchSlider>
+              <CustomSwitchSliderBefore />
+            </CustomSwitchSlider>
+            <CustomSwitchChecked>
+              <CustomSwitchCheckedSlider>
+                <CustomSwitchCheckedSliderBefore />
+              </CustomSwitchCheckedSlider>
+            </CustomSwitchChecked>
+          </CustomSwitchLabel>
+        </CustomSwitchContainer> */}
         <LoginButton onClick={handleLogin}>Login</LoginButton>
 
         <p>

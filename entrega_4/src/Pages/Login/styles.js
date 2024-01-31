@@ -100,3 +100,58 @@ export const Footer = styled.footer`
     width: 100%;
   }
 `;
+
+// estilizando o botão switch 'lembre-se de mim'
+// export const CustomSwitchContainer = styled.div`
+//   display: inline-block;
+//   position: relative;
+//   cursor: pointer;
+//   padding-left: 0px !important;
+// `;
+
+// export const CustomSwitchInput = styled.input`
+//   display: none;
+// `;
+
+// export const CustomSwitchLabel = styled.label`
+//   position: relative;
+//   padding: 10px 19px;
+//   line-height: 16px;
+//   display: inline-block;
+//   vertical-align: top;
+//   background-color: dimgrey;
+//   transition: background-color 0.3s ease;
+//   border-radius: 20px;
+// `;
+
+// export const CustomSwitchSlider = styled.div`
+//   position: absolute;
+//   top: 2px;
+//   left: 4px;
+//   right: 0;
+//   border-radius: 20px;
+//   transition: background-color 0.3s ease;
+// `;
+
+// export const CustomSwitchSliderBefore = styled.div`
+//   position: absolute;
+//   content: "";
+//   width: 16px;
+//   height: 16px;
+//   border-radius: 50%;
+//   background-color: #fff;
+//   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+//   transition: transform 0.3s ease;
+// `;
+
+// export const CustomSwitchChecked = styled(CustomSwitchLabel)`
+//   background-color: #0eed0e;
+// `;
+
+// export const CustomSwitchCheckedSlider = styled(CustomSwitchSlider)`
+//   background-color: #0eed0e;
+// `;
+
+// export const CustomSwitchCheckedSliderBefore = styled(CustomSwitchSliderBefore)`
+//   transform: translateX(15px);
+// `;

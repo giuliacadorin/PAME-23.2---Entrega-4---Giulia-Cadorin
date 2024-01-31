@@ -1,16 +1,10 @@
-// src/Pages/Home/index.js
 import React from "react";
-import { PageContainer, Container, HomeTitle } from "./styles";
 
-function Home() {
+const Home = () => {
   return (
-    <PageContainer>
-      <Container>
-        <HomeTitle>Bem-vindo à Página Home!</HomeTitle>
-        {/* Conteúdo da página Home */}
-      </Container>
-    </PageContainer>
+    <div>
+    </div>
   );
-}
+};
 
 export default Home;
