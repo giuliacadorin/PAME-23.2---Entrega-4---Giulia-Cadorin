@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { VscAccount, VscLock } from "react-icons/vsc";
 
 import {
-  Footer,
   PageContainer,
   Container,
   LoginTitle,
   Input,
   LoginButton,
   InputWithIcon,
+  CheckboxWrapper,
+  CheckboxInput,
+  CheckboxLabel,
   // CustomSwitchContainer,
   // CustomSwitchInput,
   // CustomSwitchLabel,
@@ -21,30 +23,62 @@ import {
 } from "./styles";
 
 function Login() {
-  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [rememberUser, setRememberUser] = useState(false);
+  const navigate = useNavigate();
+
+  // Efeito para preencher automaticamente os campos ao carregar a página
+  useEffect(() => {
+    const storedUser = localStorage.getItem("lastLoggedInUser");
+
+    if (storedUser) {
+      const { username, password } = JSON.parse(storedUser);
+      setUsername(username);
+      setPassword(password);
+      setRememberUser(true);
+    }
+  }, []);
 
   const handleLogin = () => {
-    // Lógica de autenticação
-    // if (username === "usuario" && password === "senha") {
-    //   console.log("Usuário logado com sucesso!");
+    const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+    const user = existingUsers.find(
+      (u) => u.username === username && u.password === password
+    );
 
-      // Salva as informações do usuário no localStorage se a opção "Lembrar usuário" estiver marcada
-      // if (rememberUser) {
-      //   localStorage.setItem(
-      //     "rememberedUser",
-      //     JSON.stringify({ username, password })
-      //   );
-      // }
-      const isAuthenticated = true;
-      // Redireciona para a página "home"
+    if (user) {
+      // Usuário autenticado, redirecione para a página /home
       navigate("/home");
-    // } else {
-    //   console.log("Usuário não cadastrado.");
+
+      // Salvar último usuário logado se "Lembrar usuário" estiver marcado
+      if (rememberUser) {
+        localStorage.setItem(
+          "lastLoggedInUser",
+          JSON.stringify({ username, password })
+        );
+      } else {
+        // Limpar as informações do último usuário se "Lembrar usuário" não estiver marcado
+        localStorage.removeItem("lastLoggedInUser");
+      }
+    } else {
+      // Credenciais inválidas, exiba um alerta
+      alert("Usuário ou senha incorretos");
     }
-  // };
+  };
+  const MyCheckbox = ({ label, checked, onChange }) => {
+    return (
+      <CheckboxWrapper>
+        <CheckboxInput type="checkbox" checked={checked} onChange={onChange} />
+        <CheckboxLabel>{label}</CheckboxLabel>
+      </CheckboxWrapper>
+    );
+  };
+
+  const [isChecked, setChecked] = React.useState(false);
+
+  const handleCheckboxChange = () => {
+    setChecked(!isChecked);
+  };
 
   return (
     <PageContainer>
@@ -69,35 +103,26 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </InputWithIcon>
-        {/* <CustomSwitchContainer>
-          <CustomSwitchInput
+        <MyCheckbox
+          label="Lembrar usuário"
+          checked={isChecked}
+          onChange={handleCheckboxChange}
+        />
+
+        <label>
+          <input
             type="checkbox"
-            id="customSwitch"
             checked={rememberUser}
             onChange={() => setRememberUser(!rememberUser)}
-          />
-          <CustomSwitchLabel htmlFor="customSwitch">
-            <CustomSwitchSlider>
-              <CustomSwitchSliderBefore />
-            </CustomSwitchSlider>
-            <CustomSwitchChecked>
-              <CustomSwitchCheckedSlider>
-                <CustomSwitchCheckedSliderBefore />
-              </CustomSwitchCheckedSlider>
-            </CustomSwitchChecked>
-          </CustomSwitchLabel>
-        </CustomSwitchContainer> */}
+          />{" "}
+          Lembrar usuário
+        </label>
         <LoginButton onClick={handleLogin}>Login</LoginButton>
 
         <p>
           Ainda não é cadastrado? <a href="/cadastro">Cadastre-se</a>
         </p>
       </Container>
-      <Footer>
-        <div>
-          <p> © 2024 Lua Negra Todos os direitos reservados.</p>
-        </div>
-      </Footer>
     </PageContainer>
   );
 }

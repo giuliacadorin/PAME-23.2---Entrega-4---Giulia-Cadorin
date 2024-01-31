@@ -21,7 +21,7 @@ export const Container = styled.div`
 `;
 
 export const CadastroTitle = styled.h2`
-  margin-bottom: auto;
+  // margin-bottom: auto;
   color: #fff;
 `;
 
@@ -63,31 +63,25 @@ export const InputWithIcon = styled.div`
 
 export const CadastroButton = styled.button`
   width: 320px;
-  height: 40px;
   background-color: #4caf50;
   color: #fff;
   border: none;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 22px;
   border-radius: 12px;
-  margin-bottom: 80px;
   margin-top: 30px;
+  padding: 12px;
 `;
 
-export const Footer = styled.footer`
-  background-color: #1f3842;
+export const VoltarButton = styled.button`
+  width: 320px;
+  background-color: #75b3ad;
   color: #fff;
-  text-align: center;
-  padding: 20px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  font-size: 12px;
-  display: flex;
-  justify-content: center;
-
-  div {
-    width: 100%;
-  }
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  margin-top: 25px;
+  padding: 12px;
 `;
-

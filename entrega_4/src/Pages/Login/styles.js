@@ -20,10 +20,20 @@ export const Container = styled.div`
   border-radius: 10px;
   width: 360px;
   height: 420px;
+
+  p {
+    color: #fff;
+  }
+  label {
+    color: #fff;
+  }
+  a {
+    color: #fff;
+  }
 `;
 export const LoginTitle = styled.h2`
   color: #fff;
-  margin-bottom: auto;
+  // margin-bottom: auto;
 `;
 
 export const LoginContainer = styled.div`
@@ -32,7 +42,6 @@ export const LoginContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  
 `;
 
 export const Input = styled.input`
@@ -42,6 +51,7 @@ export const Input = styled.input`
   padding: 8px;
   border-radius: 12px;
   border: none;
+  vertical-align: text-bottom;
 `;
 
 export const InputWithIcon = styled.div`
@@ -72,33 +82,43 @@ export const InputWithIcon = styled.div`
 
 export const LoginButton = styled.button`
   width: 320px;
-  height: 40px;
   background-color: #4caf50;
   color: #fff;
   border: none;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 22px;
   border-radius: 12px;
   margin-top: 30px;
   margin-bottom: 20px;
+  padding: 12px;
 `;
 
-// Estilização para o rodapé
-export const Footer = styled.footer`
-  background-color: #1f3842;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  font-size: 12px;
+export const CheckboxWrapper = styled.label`
   display: flex;
-  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: normal;
+  user-select: none;
+`;
 
-  div {
-    width: 100%;
+export const CheckboxInput = styled.input`
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #adb5bd;
+  border-radius: 4px;
+  margin-right: 8px;
+  cursor: pointer;
+  outline: none;
+
+  &:checked {
+    background-color: #1b236c;
+    border-color: #00e3ff;
   }
+`;
+
+export const CheckboxLabel = styled.span`
+  color: #fff;
 `;
 
 // estilizando o botão switch 'lembre-se de mim'

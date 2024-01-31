@@ -1,14 +1,13 @@
-// Header.js
 import React from "react";
 import { HeaderContainer, HeaderContent, HeaderDiv } from "./styles";
-// import { FaBars } from "react-icons/fa";
+import { TbMenu2 } from "react-icons/tb";
 
 const Header = ({ handleToggleSidebar, isSidebarOpen }) => {
   return (
     <HeaderContainer isSidebarOpen={isSidebarOpen}>
       <HeaderContent>
         <div>
-          {/* <FaBars onClick={handleToggleSidebar} /> */}
+          <TbMenu2 onClick={handleToggleSidebar} />
         </div>
         <div>
           <HeaderDiv>Lua Negra</HeaderDiv>

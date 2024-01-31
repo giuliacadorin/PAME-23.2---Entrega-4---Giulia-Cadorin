@@ -1,21 +1,28 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { SidebarContainer, SidebarIcon } from "./styles";
-import { TbMenu2 } from "react-icons/tb";
+import React from "react";
+import { SidebarContainer, SidebarText } from "./styles";
 
-const Sidebar = () => {
-  const [isSidebarOpen, setSidebarOpen] = useState(false);
-
-  const handleToggleSidebar = () => {
-    setSidebarOpen(!isSidebarOpen);
-  };
-
+const Sidebar = ({ isSidebarOpen }) => {
   return (
-    <SidebarContainer isOpen={isSidebarOpen}>
-      <Link to="/dashboard">
-        <SidebarIcon as={TbMenu2} onClick={handleToggleSidebar} />
-      </Link>
-      {/* Adicione mais links ou itens da barra lateral conforme necessário */}
+    <SidebarContainer isSidebarOpen={isSidebarOpen}>
+      <SidebarText>
+        <a href="/">Registrar entradas de produtos no estoque</a>
+      </SidebarText>
+      <SidebarText>
+        <a href="/">Registrar saídas de produtos do estoque</a>
+      </SidebarText>
+      <SidebarText>
+        <a href="/">Registrar pedidos de encomendas</a>
+      </SidebarText>
+      <SidebarText>
+        <a href="/">Acompanhar status das entregas</a>
+      </SidebarText>
+      <SidebarText>
+        <a href="/">Registrar pedidos entregues</a>
+      </SidebarText>
+
+      <SidebarText>
+        <a href="/">Sair</a>
+      </SidebarText>
     </SidebarContainer>
   );
 };

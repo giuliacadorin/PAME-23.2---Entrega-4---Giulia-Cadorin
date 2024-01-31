@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { VscAccount, VscLock } from "react-icons/vsc";
 
@@ -8,50 +8,45 @@ import {
   CadastroButton,
   Container,
   Input,
-  Footer,
   InputWithIcon,
+  VoltarButton,
 } from "./styles";
 
 function Cadastro() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [rememberUser, setRememberUser] = useState(false);
 
   const navigate = useNavigate();
 
-  // Função para lidar com o cadastro
-  const handleCadastro = () => {
-    // Lógica de cadastro
-    console.log("Usuário cadastrado com sucesso!");
-
-    // Salva as informações do usuário no localStorage se a opção "Lembrar usuário" estiver marcada
-    if (rememberUser) {
-      localStorage.setItem(
-        "rememberedUser",
-        JSON.stringify({ username, password })
-      );
-    }
-
-    // Redireciona para a página de login
+  const handleVoltar = () => {
     navigate("/login");
   };
 
-  // Função para carregar as informações do usuário salvas no localStorage (se existirem)
-  const loadRememberedUser = () => {
-    const rememberedUser = localStorage.getItem("rememberedUser");
+  // Função para lidar com o cadastro
+  const handleCadastro = () => {
+    // Verifica se já há dados no localStorage
+    const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
 
-    if (rememberedUser) {
-      const { username, password } = JSON.parse(rememberedUser);
-      setUsername(username);
-      setPassword(password);
-      setRememberUser(true);
+    // Verifica se o usuário já existe
+    const userExists = existingUsers.some((user) => user.username === username);
+
+    if (userExists) {
+      alert("Usuário já existe. Escolha outro nome de usuário.");
+      return;
     }
-  };
 
-  // Carrega as informações do usuário ao montar o componente
-  useEffect(() => {
-    loadRememberedUser();
-  }, []);
+    // Adiciona o novo usuário
+    const newUser = { username, password };
+    const updatedUsers = [...existingUsers, newUser];
+    localStorage.setItem("users", JSON.stringify(updatedUsers));
+
+    // Limpa os campos do formulário
+    setUsername("");
+    setPassword("");
+
+    alert("Usuário " + username + " cadastrado com sucesso!");
+    navigate("/login");
+  };
 
   return (
     <CadastroContainer>
@@ -79,13 +74,9 @@ function Cadastro() {
           </InputWithIcon>
         </div>
 
-        {/* Usa o componente Link para criar um link para a página de login */}
         <CadastroButton onClick={handleCadastro}>Cadastrar</CadastroButton>
+        <VoltarButton onClick={handleVoltar}>Iniciar sessão</VoltarButton>
       </Container>
-
-      <Footer>
-        <p> © 2024 Lua Negra Todos os direitos reservados.</p>
-      </Footer>
     </CadastroContainer>
   );
 }
