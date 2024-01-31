@@ -23,7 +23,7 @@ export const Container = styled.div`
 `;
 export const LoginTitle = styled.h2`
   color: #fff;
-  margin-bottom: 50px;
+  margin-bottom: auto;
 `;
 
 export const LoginContainer = styled.div`
@@ -35,25 +35,6 @@ export const LoginContainer = styled.div`
   
 `;
 
-export const InputWithImage = styled.div`
-  position: relative;
-
-  input {
-    width: 100%;
-    padding: 10px;
-    padding-left: 40px; /* Espaço para a imagem */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-
-  .input-image {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-  }
-`;
-
 export const Input = styled.input`
   width: 300px;
   height: 30px;
@@ -63,8 +44,34 @@ export const Input = styled.input`
   border: none;
 `;
 
+export const InputWithIcon = styled.div`
+  position: relative;
+
+  .icon {
+    position: absolute;
+    top: 42%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+
+  .lockIcon {
+    position: absolute;
+    top: 42%;
+    left: 10px; 
+    transform: translateY(-50%);
+  }
+
+  input {
+    width: calc(100% - 150px);   
+    padding-left: 40px; /* Espaço para o ícone */
+    border: none
+    border-radius: 12px;
+    padding: 10px 100px 10px 52px;
+  }
+`;
+
 export const LoginButton = styled.button`
-  width: 300px;
+  width: 320px;
   height: 40px;
   background-color: #4caf50;
   color: #fff;
@@ -72,7 +79,8 @@ export const LoginButton = styled.button`
   cursor: pointer;
   font-size: 12px;
   border-radius: 12px;
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 `;
 
 // Estilização para o rodapé
@@ -86,5 +94,9 @@ export const Footer = styled.footer`
   width: 100%;
   font-size: 12px;
   display: flex;
-  justify-content:space-between;
+  justify-content: center;
+
+  div {
+    width: 100%;
+  }
 `;
