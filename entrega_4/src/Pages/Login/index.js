@@ -37,6 +37,7 @@ function Login() {
       setUsername(username);
       setPassword(password);
       setRememberUser(true);
+      setChecked(true);
     }
   }, []);
 
@@ -77,6 +78,7 @@ function Login() {
   const [isChecked, setChecked] = React.useState(false);
 
   const handleCheckboxChange = () => {
+    setRememberUser(!rememberUser);
     setChecked(!isChecked);
   };
 
@@ -109,14 +111,6 @@ function Login() {
           onChange={handleCheckboxChange}
         />
 
-        <label>
-          <input
-            type="checkbox"
-            checked={rememberUser}
-            onChange={() => setRememberUser(!rememberUser)}
-          />{" "}
-          Lembrar usuário
-        </label>
         <LoginButton onClick={handleLogin}>Login</LoginButton>
 
         <p>

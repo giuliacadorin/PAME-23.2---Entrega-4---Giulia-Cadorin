@@ -67,7 +67,7 @@ export const CadastroButton = styled.button`
   color: #fff;
   border: none;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 14px;
   border-radius: 12px;
   margin-top: 30px;
   padding: 12px;
@@ -79,7 +79,7 @@ export const VoltarButton = styled.button`
   color: #fff;
   border: none;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 14px;
   border-radius: 12px;
   margin-bottom: 40px;
   margin-top: 25px;

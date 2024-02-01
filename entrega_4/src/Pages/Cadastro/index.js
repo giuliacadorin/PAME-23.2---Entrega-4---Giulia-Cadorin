@@ -75,7 +75,7 @@ function Cadastro() {
         </div>
 
         <CadastroButton onClick={handleCadastro}>Cadastrar</CadastroButton>
-        <VoltarButton onClick={handleVoltar}>Iniciar sessão</VoltarButton>
+        <VoltarButton onClick={handleVoltar}>Iniciar sessão</VoltarButton>  {/* caso a pessoa clique errado ela tem a opção de voltar para login*/}
       </Container>
     </CadastroContainer>
   );

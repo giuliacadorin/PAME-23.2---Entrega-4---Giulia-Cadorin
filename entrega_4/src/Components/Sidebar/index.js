@@ -5,21 +5,11 @@ const Sidebar = ({ isSidebarOpen }) => {
   return (
     <SidebarContainer isSidebarOpen={isSidebarOpen}>
       <SidebarText>
-        <a href="/">Registrar entradas de produtos no estoque</a>
+        <a href="/estoque">Estoque</a>
       </SidebarText>
       <SidebarText>
-        <a href="/">Registrar saídas de produtos do estoque</a>
+        <a href="/encomendas">Encomendas</a>
       </SidebarText>
-      <SidebarText>
-        <a href="/">Registrar pedidos de encomendas</a>
-      </SidebarText>
-      <SidebarText>
-        <a href="/">Acompanhar status das entregas</a>
-      </SidebarText>
-      <SidebarText>
-        <a href="/">Registrar pedidos entregues</a>
-      </SidebarText>
-
       <SidebarText>
         <a href="/">Sair</a>
       </SidebarText>

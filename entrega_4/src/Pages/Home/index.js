@@ -18,6 +18,7 @@ const Home = () => {
         handleToggleSidebar={handleToggleSidebar}
         isSidebarOpen={isSidebarOpen}
       />
+      {/* <MainContent produtos={produtos} /> */}
 
       <Footer />
     </div>
