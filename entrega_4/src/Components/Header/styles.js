@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 export const HeaderDiv = styled.div`
-  background: linear-gradient(to right, #1b1b1b , #650e83, #1b1b1b);
+  background: linear-gradient(to right, #1b1b1b, #650e83, #1b1b1b);
   position: fixed;
   top: 0;
   width: calc(100% - 80px);

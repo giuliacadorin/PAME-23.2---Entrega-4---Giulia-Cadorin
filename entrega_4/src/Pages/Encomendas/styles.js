@@ -6,7 +6,6 @@ import { LuPlus, LuMinus } from "react-icons/lu";
 export const ListaProdutos = styled.ul`
   list-style-type: none;
   margin: 0;
-  // padding: 0;
 
   li {
     padding: 10px 10px;
@@ -21,27 +20,51 @@ export const TituloLista = styled.h2`
   margin-bottom: 10px;
 `;
 
+export const TituloMain = styled.h1`
+  font-size: 2rem;
+`;
+
 export const BotoesContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
 
-export const EncomendaEntregueBotao = styled.button`
-  background-color: #e74c3c;
+export const EncomendaInfo = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const EncomendaActions = styled.div`
+  margin-top: 10px;
+`;
+
+export const EncomendaEntregaBotao = styled.button`
+  background-color: #1ea922;
   color: #fff;
   border: none;
-  padding: 5px 10px;
+  padding: 15px 10px;
   border-radius: 4px;
   cursor: pointer;
   margin-right: 5px;
 `;
 
-export const ExcluirBotao = styled.button`
-  background-color: #e74c3c;
+export const EncomendaCancelaBotao = styled.button`
+  background-color: #f00;
   color: #fff;
   border: none;
-  padding: 5px 10px;
+  padding: 15px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+`;
+
+export const EncomendaExcluirBotao = styled.button`
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  padding: 15px 10px;
   border-radius: 4px;
   cursor: pointer;
   margin-right: 5px;
@@ -108,5 +131,17 @@ export const FormularioEstoque = styled.form`
     padding: 20px 16px;
     border-radius: 10px;
     cursor: pointer;
+  }
+`;
+
+export const ListaEncomendas = styled.ul`
+  list-style-type: none;
+  margin: 0;
+
+  li {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
   }
 `;

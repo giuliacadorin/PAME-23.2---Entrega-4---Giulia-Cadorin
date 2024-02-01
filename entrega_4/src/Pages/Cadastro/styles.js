@@ -3,11 +3,11 @@ import styled from "styled-components";
 // preto : #1B1B1B
 // marrom: #692403
 // roxo:    #650E83
+// lilás: #AE17E0
 // branco: #F4F7F8
 
 export const CadastroContainer = styled.div`
-  background: linear-gradient(to bottom, #1b1b1b 40%, #650e83);
-  //background-color: #7ea5b4;
+  background: linear-gradient(to bottom, #692403, #650e83);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +19,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #650e83;
+  background-color: #1b1b1b;
   padding: 20px;
   border-radius: 10px;
   width: 400px;
@@ -68,7 +68,7 @@ export const InputWithIcon = styled.div`
 
 export const CadastroButton = styled.button`
   width: 320px;
-  background-color: #692403;
+  background-color: #ae17e0;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -80,7 +80,7 @@ export const CadastroButton = styled.button`
 
 export const VoltarButton = styled.button`
   width: 320px;
-  background-color: #692403;
+  background-color: #ae17e0;
   color: #fff;
   border: none;
   cursor: pointer;

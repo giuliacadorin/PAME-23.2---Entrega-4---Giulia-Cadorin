@@ -20,6 +20,10 @@ export const TituloLista = styled.h2`
   margin-bottom: 20px;
 `;
 
+export const TituloMain = styled.h1`
+  font-size: 2rem;
+`;
+
 export const BotoesContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -41,7 +45,6 @@ export const AumentarBotao = styled.button`
   border: none;
   cursor: pointer;
   background: none;
-  
 `;
 
 export const LuPlusIcon = styled(LuPlus)`
@@ -54,7 +57,7 @@ export const LuPlusIcon = styled(LuPlus)`
 export const DiminuirBotao = styled.button`
   border: none;
   cursor: pointer;
-  background: none;  
+  background: none;
 `;
 
 export const LuMinusIcon = styled(LuMinus)`
@@ -67,7 +70,7 @@ export const LuMinusIcon = styled(LuMinus)`
 export const ContagemContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-left: auto; 
+  margin-left: auto;
 `;
 
 export const FormularioEstoque = styled.form`

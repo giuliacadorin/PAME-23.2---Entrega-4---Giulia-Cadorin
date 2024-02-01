@@ -12,8 +12,8 @@ function Rotas() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login></Login>} />
-        <Route path="/cadastro" element={<Cadastro></Cadastro>} />
+        <Route path="/" element={<Login />} />
+        <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/login" element={<Login />} />
 
         <Route path="/home" element={<Home />} />

@@ -2,7 +2,8 @@
 import styled from "styled-components";
 
 export const SidebarContainer = styled.div`
-  background-color: #692403;
+  background: linear-gradient(to bottom, #692403, #650e83);
+  color: #fff;
   color: #fff;
   width: 200px;
   height: 100vh;

@@ -24,6 +24,15 @@ function Cadastro() {
 
   // Função para lidar com o cadastro
   const handleCadastro = () => {
+    if (username == "") {
+      alert("Preencha usuário.");
+      return;
+    }
+    if (password == "") {
+      alert("Preencha a senha.");
+      return;
+    }
+
     // Verifica se já há dados no localStorage
     const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
 
@@ -52,7 +61,6 @@ function Cadastro() {
     <CadastroContainer>
       <Container>
         <CadastroTitle>Faça seu cadastro!</CadastroTitle>
-
         <div>
           <InputWithIcon>
             <VscAccount className="icon" />
@@ -73,9 +81,9 @@ function Cadastro() {
             />
           </InputWithIcon>
         </div>
-
         <CadastroButton onClick={handleCadastro}>Cadastrar</CadastroButton>
-        <VoltarButton onClick={handleVoltar}>Iniciar sessão</VoltarButton>  {/* caso a pessoa clique errado ela tem a opção de voltar para login*/}
+        <VoltarButton onClick={handleVoltar}>Iniciar sessão</VoltarButton>{" "}
+        {/* caso a pessoa clique errado ela tem a opção de voltar para login*/}
       </Container>
     </CadastroContainer>
   );

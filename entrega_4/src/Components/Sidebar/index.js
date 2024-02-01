@@ -5,6 +5,9 @@ const Sidebar = ({ isSidebarOpen }) => {
   return (
     <SidebarContainer isSidebarOpen={isSidebarOpen}>
       <SidebarText>
+        <a href="/home">Página inicial</a>
+      </SidebarText>
+      <SidebarText>
         <a href="/estoque">Estoque</a>
       </SidebarText>
       <SidebarText>

@@ -1,19 +1,15 @@
-// Estoque.js
-
 import React, { useState, useEffect } from "react";
 import Sidebar from "../../Components/Sidebar";
 import Header from "../../Components/Header";
 import Footer from "../../Components/Footer";
-import { LuPlus } from "react-icons/lu";
-import { LuMinus } from "react-icons/lu";
-
 
 import {
+  TituloLista,
+  TituloMain,
   ExcluirBotao,
   AumentarBotao,
   DiminuirBotao,
   ListaProdutos,
-  TituloLista,
   BotoesContainer,
   FormularioEstoque,
   ContagemContainer,
@@ -111,8 +107,17 @@ const Estoque = () => {
         handleToggleSidebar={handleToggleSidebar}
         isSidebarOpen={isSidebarOpen}
       />
-
-      <main style={{ display: "flex", margin: "100px 0px 0px 0px" }}>
+      <div
+        style={{
+          height: "90px",
+          padding: "100px 0px 0px 0px",
+          Width: "100%",
+          textAlign: "center",
+        }}
+      >
+        <TituloMain>Estoque de Produtos</TituloMain>
+      </div>
+      <main style={{ display: "flex", margin: "0px 0px 100px 0px" }}>
         <div style={{ flex: 1, padding: "20px" }}>
           <TituloLista>Produtos em Estoque</TituloLista>
           {produtos.length === 0 ? (
