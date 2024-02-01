@@ -6,6 +6,7 @@ import Cadastro from "../Pages/Cadastro";
 
 import Home from "../Pages/Home";
 import Estoque from "../Pages/Estoque";
+import Encomendas from "../Pages/Encomendas";
 
 function Rotas() {
   return (
@@ -17,7 +18,7 @@ function Rotas() {
 
         <Route path="/home" element={<Home />} />
         <Route path="/estoque" element={<Estoque />} />
-        <Route path="/encomendas" element={<Home />} />
+        <Route path="/encomendas" element={<Encomendas />} />
 
         <Route path="/*" element={<div>Not Found</div>} />
       </Routes>

@@ -16,7 +16,7 @@ import styled from "styled-components";
 export const HeaderDiv = styled.div`
   position: fixed;
   top: 0;
-  width: 100%;
+  width: calc(100% - 80px);
   background-color: #4a707f;
   color: #fff;
   text-align: center;

@@ -6,9 +6,8 @@ const Header = ({ handleToggleSidebar, isSidebarOpen }) => {
   return (
     <HeaderContainer isSidebarOpen={isSidebarOpen}>
       <HeaderContent>
-        <div>
+        <div style={{ fontSize: "30px" }}>
           <TbMenu2 onClick={handleToggleSidebar} />
-          {/* menu icon onde ao ser clicado abre o sidebar*/}
         </div>
         <div>
           <HeaderDiv>Lua Negra</HeaderDiv>
