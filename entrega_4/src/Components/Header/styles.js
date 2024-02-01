@@ -1,19 +1,8 @@
 //header styles.js
 import styled from "styled-components";
-// import { TbMenu2 } from "react-icons/tb";
-
-// const iconSize = 70;
-
-// export const SidebarIcon = styled(TbMenu2)`
-//   // display: inline;
-//   font-size: 50px; // Use a variável de tamanho aqui
-//   margin-bottom: 10px;
-//   color: #fff;
-//   text-decoration: none;
-//   cursor: pointer;
-// `;
 
 export const HeaderDiv = styled.div`
+  background: linear-gradient(to right, #1b1b1b , #650e83, #1b1b1b);
   position: fixed;
   top: 0;
   width: calc(100% - 80px);
@@ -27,7 +16,7 @@ export const HeaderDiv = styled.div`
 
 // Modificações no Header por causa do Sidebar
 export const HeaderContainer = styled.div`
-  background-color: #4a707f;
+  background-color: #1b1b1b;
   color: #fff;
   width: 100%;
   height: 80px;

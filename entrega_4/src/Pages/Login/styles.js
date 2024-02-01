@@ -1,8 +1,14 @@
 import styled from "styled-components";
 
+// preto : #1B1B1B
+// marrom: #692403
+// roxo:   #650E83
+// branco: #F4F7F8
+
 // Conteiner da Página
 export const PageContainer = styled.div`
-  background-color: #7ea5b4;
+  background: linear-gradient(to bottom, #1b1b1b 40%, #650e83);
+  //background-color: #7ea5b4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,11 +21,11 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #4a707f;
+  background-color: #650e83;
   padding: 20px;
   border-radius: 10px;
-  width: 360px;
-  height: 420px;
+  width: 400px;
+  height: 460px;
 
   p {
     color: #fff;
@@ -32,7 +38,7 @@ export const Container = styled.div`
   }
 `;
 export const LoginTitle = styled.h2`
-  color: #fff;
+  color: #F4F7F8;
   // margin-bottom: auto;
 `;
 
@@ -82,15 +88,15 @@ export const InputWithIcon = styled.div`
 
 export const LoginButton = styled.button`
   width: 320px;
-  background-color: #4caf50;
+  background-color:#692403; //#4caf50;
   color: #fff;
   border: none;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   border-radius: 12px;
   margin-top: 30px;
   margin-bottom: 20px;
-  padding: 12px;
+  padding: 16px;
 `;
 
 export const CheckboxWrapper = styled.label`

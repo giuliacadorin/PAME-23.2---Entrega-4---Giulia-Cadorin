@@ -14,6 +14,7 @@ import {
   ExcluirBotao,
   AumentarBotao,
   DiminuirBotao,
+  ContagemContainer,
   ListaProdutos,
   TituloLista,
   BotoesContainer,
@@ -157,7 +158,8 @@ const Encomendas = () => {
               {produtos.map((produto) => (
                 <li key={produto.id}>
                   <BotoesContainer>
-                    {produto.nome}:
+                    {produto.nome}
+                    <ContagemContainer>
                     <DiminuirBotao onClick={() => diminuirContagem(produto.id)}>
                       <LuMinusIcon />
                     </DiminuirBotao>
@@ -165,6 +167,7 @@ const Encomendas = () => {
                     <AumentarBotao onClick={() => aumentarContagem(produto.id)}>
                       <LuPlusIcon />
                     </AumentarBotao>
+                    </ContagemContainer>
                     <EncomendarBotao
                       onClick={() => adicionarNovaEncomenda(produto.id)}
                     >

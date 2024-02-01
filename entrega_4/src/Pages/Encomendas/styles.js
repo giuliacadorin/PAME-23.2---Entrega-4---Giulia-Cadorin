@@ -24,6 +24,7 @@ export const TituloLista = styled.h2`
 export const BotoesContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
 
 export const EncomendaEntregueBotao = styled.button`
@@ -53,7 +54,8 @@ export const EncomendarBotao = styled.button`
   padding: 12px 12px;
   border-radius: 10px;
   cursor: pointer;
-  margin-right: 5px;
+  margin-right: 6px;
+  margin-left: 20px;
 `;
 
 export const AumentarBotao = styled.button`
@@ -80,6 +82,12 @@ export const LuMinusIcon = styled(LuMinus)`
   display: flex;
   align-items: center;
   margin-right: 10px;
+`;
+
+export const ContagemContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 `;
 
 export const FormularioEstoque = styled.form`
