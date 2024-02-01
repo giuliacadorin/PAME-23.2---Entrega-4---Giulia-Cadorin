@@ -1,6 +1,7 @@
 // styles.js
 
 import styled from "styled-components";
+import { LuPlus, LuMinus } from "react-icons/lu";
 
 export const ListaProdutos = styled.ul`
   list-style-type: none;
@@ -49,30 +50,36 @@ export const EncomendarBotao = styled.button`
   background-color: #e74c3c;
   color: #fff;
   border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
+  padding: 12px 12px;
+  border-radius: 10px;
   cursor: pointer;
   margin-right: 5px;
 `;
 
 export const AumentarBotao = styled.button`
-  background-color: #2ecc71;
-  color: #fff;
   border: none;
-  padding: 5px 15px;
-  border-radius: 4px;
   cursor: pointer;
-  margin: 0px 25px;
+  background: none;
+`;
+
+export const LuPlusIcon = styled(LuPlus)`
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
 `;
 
 export const DiminuirBotao = styled.button`
-  background-color: #e67e22;
-  color: #fff;
   border: none;
-  padding: 5px 15px;
-  border-radius: 4px;
   cursor: pointer;
-  margin: 0px 25px;
+  background: none;
+`;
+
+export const LuMinusIcon = styled(LuMinus)`
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
 `;
 
 export const FormularioEstoque = styled.form`
@@ -81,8 +88,8 @@ export const FormularioEstoque = styled.form`
 
   input {
     margin-bottom: 10px;
-    padding: 8px;
-    border-radius: 8px;
+    padding: 20px 16px;
+    border-radius: 10px;
     border: 1px solid #ddd;
   }
 
@@ -90,8 +97,8 @@ export const FormularioEstoque = styled.form`
     background-color: #3498db;
     color: #fff;
     border: none;
-    padding: 8px;
-    border-radius: 8px;
+    padding: 20px 16px;
+    border-radius: 10px;
     cursor: pointer;
   }
 `;

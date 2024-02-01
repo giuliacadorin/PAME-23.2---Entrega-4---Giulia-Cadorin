@@ -18,6 +18,8 @@ import {
   TituloLista,
   BotoesContainer,
   FormularioEstoque,
+  LuMinusIcon,
+  LuPlusIcon,
 } from "./styles";
 
 const Encomendas = () => {
@@ -157,13 +159,11 @@ const Encomendas = () => {
                   <BotoesContainer>
                     {produto.nome}:
                     <DiminuirBotao onClick={() => diminuirContagem(produto.id)}>
-                      - {/*<LuMinus/> */}
+                      <LuMinusIcon />
                     </DiminuirBotao>
                     {produto.contagem}
-                    <AumentarBotao
-                      onClick={() => aumentarContagem(produto.id)}
-                    >
-                      + {/* <LuPlus /> */}
+                    <AumentarBotao onClick={() => aumentarContagem(produto.id)}>
+                      <LuPlusIcon />
                     </AumentarBotao>
                     <EncomendarBotao
                       onClick={() => adicionarNovaEncomenda(produto.id)}
