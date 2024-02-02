@@ -20,17 +20,18 @@ import {
   EncomendaInfo,
   EncomendaActions,
   ListaEncomendas,
+  ContagemContainer,
 } from "./styles";
 
 const Encomendas = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [issidebaropen, setissidebaropen] = useState(false);
   const [produtos, setProdutos] = useState([]);
   const [encomendas, setEncomendas] = useState([]);
   // const [novaEncomenda, setNovaEncomenda] = useState("");
   // const [novoProduto, setNovoProduto] = useState("");
 
   const handleToggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
+    setissidebaropen(!issidebaropen);
   };
 
   useEffect(() => {
@@ -133,11 +134,11 @@ const Encomendas = () => {
   // Renderização da lista de produtos
   return (
     <div>
-      <Sidebar isSidebarOpen={isSidebarOpen} />
+      <Sidebar issidebaropen={issidebaropen} />
 
       <Header
         handleToggleSidebar={handleToggleSidebar}
-        isSidebarOpen={isSidebarOpen}
+        issidebaropen={issidebaropen}
       />
       <div
         style={{
@@ -231,22 +232,28 @@ const Encomendas = () => {
                 <li key={produto.id}>
                   <BotoesContainer>
                     {produto.nome}:
-                    <DiminuirBotao onClick={() => diminuirContagem(produto.id)}>
-                      <LuMinus />
-                    </DiminuirBotao>
-                    <input
-                      type="text"
-                      id={`qtd_encomenda_${produto.id}`}
-                      value={1}
-                      readOnly
-                      style={{
-                        border: "none",
-                        width: `${(1).toString().length * 8 + 8}px`,
-                      }}
-                    />
-                    <AumentarBotao onClick={() => aumentarContagem(produto.id)}>
-                      <LuPlus />
-                    </AumentarBotao>
+                    <ContagemContainer>
+                      <DiminuirBotao
+                        onClick={() => diminuirContagem(produto.id)}
+                      >
+                        <LuMinus />
+                      </DiminuirBotao>
+                      <input
+                        type="text"
+                        id={`qtd_encomenda_${produto.id}`}
+                        value={1}
+                        readOnly
+                        style={{
+                          border: "none",
+                          width: `${(1).toString().length * 8 + 8}px`,
+                        }}
+                      />
+                      <AumentarBotao
+                        onClick={() => aumentarContagem(produto.id)}
+                      >
+                        <LuPlus />
+                      </AumentarBotao>
+                    </ContagemContainer>
                     <EncomendarBotao
                       onClick={() => {
                         adicionarNovaEncomenda(produto);

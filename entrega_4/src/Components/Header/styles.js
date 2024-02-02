@@ -2,7 +2,6 @@
 import styled from "styled-components";
 
 export const HeaderDiv = styled.div`
-  background: linear-gradient(to right, #1b1b1b, #650e83, #1b1b1b);
   position: fixed;
   top: 0;
   width: calc(100% - 80px);
@@ -16,7 +15,7 @@ export const HeaderDiv = styled.div`
 
 // Modificações no Header por causa do Sidebar
 export const HeaderContainer = styled.div`
-  background-color: #1b1b1b;
+  background: linear-gradient(to right, #1b1b1b, #650e83, #1b1b1b);
   color: #fff;
   width: 100%;
   height: 80px;

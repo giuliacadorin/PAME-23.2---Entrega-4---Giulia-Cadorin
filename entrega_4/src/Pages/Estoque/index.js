@@ -18,10 +18,10 @@ import {
 } from "./styles";
 
 const Estoque = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [issidebaropen, setissidebaropen] = useState(false);
 
   const handleToggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
+    setissidebaropen(!issidebaropen);
   };
 
   const [produtos, setProdutos] = useState([]);
@@ -101,11 +101,11 @@ const Estoque = () => {
   // Renderização da lista de produtos
   return (
     <div>
-      <Sidebar isSidebarOpen={isSidebarOpen} />
+      <Sidebar issidebaropen={issidebaropen} />
 
       <Header
         handleToggleSidebar={handleToggleSidebar}
-        isSidebarOpen={isSidebarOpen}
+        issidebaropen={issidebaropen}
       />
       <div
         style={{

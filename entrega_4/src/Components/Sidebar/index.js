@@ -1,9 +1,9 @@
 import React from "react";
 import { SidebarContainer, SidebarText } from "./styles";
 
-const Sidebar = ({ isSidebarOpen }) => {
+const Sidebar = ({ issidebaropen }) => {
   return (
-    <SidebarContainer isSidebarOpen={isSidebarOpen}>
+    <SidebarContainer issidebaropen={issidebaropen ? "true" : "false"}>
       <SidebarText>
         <a href="/home">Página inicial</a>
       </SidebarText>

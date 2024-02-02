@@ -1,18 +1,23 @@
 import React from "react";
-import { HeaderContainer, HeaderContent, HeaderDiv } from "./styles";
+import { HeaderContainer, HeaderContent } from "./styles";
 import { TbMenu2 } from "react-icons/tb"; //importa o menu icon da biblioteca de ícones do react
+import LogoLua from "./../Assets/logoNome.png";
 
-const Header = ({ handleToggleSidebar, isSidebarOpen }) => {
+const Header = ({ handleToggleSidebar, issidebaropen }) => {
   return (
-    <HeaderContainer isSidebarOpen={isSidebarOpen}>
+    <HeaderContainer issidebaropen={issidebaropen ? "true" : "false"}>
       <HeaderContent>
-        <div style={{ fontSize: "30px" }}>
+        <div style={{ fontSize: "30px", cursor: "pointer" }}>
           <TbMenu2 onClick={handleToggleSidebar} />
         </div>
-        <div>
-          <HeaderDiv>Lua Negra</HeaderDiv>
-        </div>
       </HeaderContent>
+      <div style={{ width: "100%", textAlign: "center" }}>
+        <img
+          src={LogoLua}
+          alt="Seu Logo"
+          style={{ width: "100px", height: "auto" }} // Ajuste conforme necessário
+        />{" "}
+      </div>
     </HeaderContainer>
   );
 };

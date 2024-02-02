@@ -14,7 +14,7 @@ export const SidebarContainer = styled.div`
   transition: left 0.3s ease; /* Adiciona uma transição para o tamanho */
   position: fixed;
   top: 80px; /* Heigth do header */
-  left: ${({ isSidebarOpen }) => (isSidebarOpen ? "0" : "-200px")};
+  left: ${({ issidebaropen }) => (issidebaropen === "true" ? "0" : "-200px")};
   z-index: 1;
   padding-top: 25px;
 `;

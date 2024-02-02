@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { LuPlus } from "react-icons/lu";
-import { LuMinus } from "react-icons/lu";
+import { LuPlus, LuMinus } from "react-icons/lu";
 
 export const ListaProdutos = styled.ul`
   list-style-type: none;

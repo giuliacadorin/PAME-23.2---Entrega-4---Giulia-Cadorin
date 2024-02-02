@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { VscAccount, VscLock } from "react-icons/vsc";
+import LogoLua from "./../../Components/Assets/logoNome.png";
 
 import {
   CadastroContainer,
@@ -24,11 +25,11 @@ function Cadastro() {
 
   // Função para lidar com o cadastro
   const handleCadastro = () => {
-    if (username == "") {
+    if (username === "") {
       alert("Preencha usuário.");
       return;
     }
-    if (password == "") {
+    if (password === "") {
       alert("Preencha a senha.");
       return;
     }
@@ -60,6 +61,13 @@ function Cadastro() {
   return (
     <CadastroContainer>
       <Container>
+        <div style={{ width: "100%", textAlign: "center" }}>
+          <img
+            src={LogoLua}
+            alt="Seu Logo"
+            style={{ width: "100px", height: "auto" }} // Ajuste conforme necessário
+          />{" "}
+        </div>
         <CadastroTitle>Faça seu cadastro!</CadastroTitle>
         <div>
           <InputWithIcon>

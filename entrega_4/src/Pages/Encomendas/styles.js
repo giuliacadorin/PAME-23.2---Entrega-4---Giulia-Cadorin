@@ -1,17 +1,17 @@
-// styles.js
-
 import styled from "styled-components";
 import { LuPlus, LuMinus } from "react-icons/lu";
 
 export const ListaProdutos = styled.ul`
   list-style-type: none;
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
 
   li {
     padding: 10px 10px;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-bottom: 10px;
+    margin-left: 0px;
   }
 `;
 

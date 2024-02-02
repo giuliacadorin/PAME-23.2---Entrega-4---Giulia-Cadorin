@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { VscAccount, VscLock } from "react-icons/vsc";
+import LogoLua from "./../../Components/Assets/logoNome.png";
 
 import {
   PageContainer,
@@ -85,6 +86,13 @@ function Login() {
   return (
     <PageContainer>
       <Container>
+        <div style={{ width: "100%", textAlign: "center" }}>
+          <img
+            src={LogoLua}
+            alt="Seu Logo"
+            style={{ width: "100px", height: "auto" }} // Ajuste conforme necessário
+          />{" "}
+        </div>
         <LoginTitle>Faça seu login!</LoginTitle>
 
         <InputWithIcon>
